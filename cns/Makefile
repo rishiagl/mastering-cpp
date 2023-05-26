@@ -1,7 +1,7 @@
-.phony: 01 02 03 04 05 06
+.phony: thread 02 03 04 05 06 p_n_c
 
-01 : thread01.cpp
-	g++ -std=c++17 thread01.cpp -lpthread
+thread : thread.cpp
+	g++ -std=c++17 thread.cpp -lpthread
 
 02 : thread02.cpp
 	g++ -std=c++17 thread02.cpp -lpthread
@@ -20,6 +20,9 @@
 
 07 : thread07.cpp
 	g++ -std=c++17 thread07.cpp -lpthread
+
+p_n_c : p_n_c.cpp
+	g++ -std=c++17 p_n_c.cpp -lpthread
 
 
 

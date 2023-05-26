@@ -7,13 +7,17 @@ static int shared_value = 0;
 
 void shared_value_increment()
 {
+    //increments the value of shared variable by 1
     shared_value += 1;
 }
 int main()
 {
     std::vector<std::thread> t_list;
+
+    //creates 
     for (int i = 0; i < 100; i++)
     {
+        //initializes a thread with shared_value_increment funtion
         t_list.push_back(std::thread(shared_value_increment));
     }
     for (int i = 0; i < 100; i++)
